@@ -10,14 +10,12 @@ class ProfileController extends Controller
   public function index()
   {
     $data = [
-      ['name', 'Tam Tran'],
-      ['dob', '1992-06-04'],
-      ['gender', 'male'],
-      ['role', 'admin']
+      'Name' => 'Tam Tran',
+      'Date of birth'=> '1992-06-04',
+      'Gender' => 'male',
+      'Role' => 'admin'
     ];
 
-    return view('admin.profile', [
-      'data' => $data
-    ]);
+    return view('admin.profile')->with('data', $data);
   }
 }

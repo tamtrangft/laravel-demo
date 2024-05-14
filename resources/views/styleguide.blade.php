@@ -3,7 +3,7 @@
 <script type="module">
   $(() => {
     window.btn1ClickHandler = () => {
-      // alert($("input[name='firstName']").val())
+      alert('btn1 clicked')
     }
 
     window.btn2ClickHandler = () => {
@@ -27,7 +27,7 @@
     <div class="mt-3">
       <h5>Buttons</h5>
       <ul>
-        <li>Props</li>
+        <li>Anonymous components: use @@props to declare component properties</li>
         <li>Push style.scss to style stack with pushOnce to prevent pushing multiple css when using multiple instances of the component</li>
         <li>Push script to script stack. Button onClick to run '@{{ $id }}ClickHandler' function if exists</li>
       </ul>

@@ -5,8 +5,3 @@ import 'bootstrap';
 
 // Added: Popper.js dependency for popover support in Bootstrap
 import '@popperjs/core';
-console.log("test");
-
-$(document).ready(function () {
-  console.log("test1");
-});
