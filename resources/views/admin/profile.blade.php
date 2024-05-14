@@ -1,5 +1,4 @@
-<x-admin-layout>
-  <x-slot name="title">Admin | Profile</x-slot>
+<x-admin-layout title="Admin | Profile">
   @push('css')
   @vite(['resources/views/admin/styles.scss'])
   @endpush

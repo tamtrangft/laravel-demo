@@ -6,14 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class AdminLayout extends Component
+class Card extends Component
 {
     /**
      * Create a new component instance.
      */
-  public function __construct(
-    public string $title
-  ) {
+    public function __construct()
+    {
+        //
     }
 
     /**
@@ -21,6 +21,6 @@ class AdminLayout extends Component
      */
     public function render(): View|Closure|string
     {
-    return view('components.layouts.admin-layout');
+        return view('components.card');
     }
 }

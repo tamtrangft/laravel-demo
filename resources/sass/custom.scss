@@ -2,34 +2,40 @@
 
 @import "bootstrap/scss/variables";
 
-
 $custom-colors: (
-  "card": rgb(24 24 27)
+  "card": rgb(24 24 27),
 );
 
 // Merge the maps
-$theme-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $grays, $theme-colors, $custom-colors);
-
+$theme-colors: map-merge-multiple($blues,
+    $indigos,
+    $purples,
+    $pinks,
+    $reds,
+    $oranges,
+    $yellows,
+    $greens,
+    $teals,
+    $cyans,
+    $grays,
+    $theme-colors,
+    $custom-colors);
 
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 
-$utilities: map-merge-multiple(
-  $utilities,
-  (
-    "text": map-merge(
-      map-get($utilities, "color"),
-      (
-        values: map-merge(
-          map-get(map-get($utilities, "color"), "values"),
-          (
-            $theme-colors
-          ),
-        ),
-      ),
+$utilities: map-merge-multiple($utilities,
+    ("text": map-merge(map-get($utilities, "color"),
+        (values: map-merge(map-get(map-get($utilities, "color"), "values"),
+            ($theme-colors)),
+        )),
     ),
-  )
-);
+    ("width": map-merge(map-get($utilities, "width"),
+        (values: map-merge(map-get(map-get($utilities, "width"), "values"),
+            ("30": 30%,
+            )),
+        )),
+    ));
 
 .max-width-800 {
   max-width: 800px;

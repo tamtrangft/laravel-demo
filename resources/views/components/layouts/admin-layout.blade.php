@@ -15,7 +15,7 @@
   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
   <!-- more css -->
-  @stack('css')
+  @stack('style')
 </head>
 
 <body class="min-vh-100 d-flex flex-column">
