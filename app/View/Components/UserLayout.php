@@ -21,6 +21,6 @@ class UserLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.user-layout');
+    return view('components.layouts.user-layout');
     }
 }
