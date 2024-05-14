@@ -1,0 +1,15 @@
+div.dt-container .dt-length {
+  display: flex;
+  gap: 16px;
+}
+
+div.dt-container .dt-search {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-title {
+  text-transform: uppercase;
+}

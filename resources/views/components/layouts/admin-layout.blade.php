@@ -22,7 +22,7 @@
   <div class="position-relative flex-grow-1">
     <img id="background" class="position-absolute top-0 start-0 max-width-800 z-0" src="https://laravel.com/assets/img/welcome/background.svg" />
     <div class="position-relative w-100 justify-content-start z-1 p-4">
-      <nav class="navbar navbar-expand-lg bg-dark mb-4">
+      <nav class="navbar navbar-expand-lg bg-dark mb-4 rounded-2">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Demo</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

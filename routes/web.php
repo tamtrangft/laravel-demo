@@ -17,3 +17,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
   Route::get('profile', [ProfileController::class, 'index'])->name('admin.profile');
   Route::get('users', [UsersController::class, 'index'])->name('admin.users');
 });
+
+Route::prefix('api')->group(function () {
+  Route::get('admin/users', [UsersController::class, 'list']);
+});
