@@ -22,6 +22,39 @@
   <div class="position-relative flex-grow-1">
     <img id="background" style="left: -200px;" class="position-absolute top-0 max-width-800 z-0" src="https://laravel.com/assets/img/welcome/background.svg" />
     <div class="position-relative w-100 justify-content-start z-1 p-4">
+      <nav class="navbar navbar-expand-lg bg-dark mb-4 rounded-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Demo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/login" role="button">
+                  Login
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ...
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="{{ ROUTE_ADMIN_PROFILE }}">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <form method="POST" action="/logout">@csrf <button type="submit" class="dropdown-item">Logout</button></form>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <main class="d-flex flex-column align-items-center w-100 gap-4">
         <!-- Main content -->
         {{ $slot }}

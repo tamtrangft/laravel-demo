@@ -7,9 +7,11 @@
     </div>
     <div class="mt-3 mb-3">
       <h5>Login form</h5>
+      <p class="text-red-500">{{ $errors->first('message') }}</p>
       <div class="d-flex gap-4 mt-3 align-items-end">
         <form id="form" class="d-flex gap-4 flex-column" method="POST">
-          <x-text-input required label="Username" inputClasses="p-2" name="username" />
+          @csrf
+          <x-text-input required label="Username" inputClasses="p-2" name="username" :error="$errors->first('username')" />
           <x-text-input required label="Password" inputClasses="p-2" name="password" type="password" />
           <x-button id='formSubmit' variant="primary" type="submit">Login</x-button>
         </form>

@@ -15,6 +15,12 @@
             data: 'name'
           },
           {
+            data: 'username'
+          },
+          {
+            data: 'role'
+          },
+          {
             data: 'createdAt'
           },
           {
@@ -47,6 +53,12 @@
           <tr>
             <th>
               Name
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Role
             </th>
             <th>
               Created at
