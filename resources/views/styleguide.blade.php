@@ -19,7 +19,7 @@
 @endPush
 <x-admin-layout title="Styleguide">
   <!-- card -->
-  <div class="d-flex flex-column gap-4 rounded-2 p-4 shadow focus-ring-light bg-card w-100">
+  <div class="d-flex flex-column gap-4 border border-1 border-light-subtle rounded-2 p-4 shadow focus-ring-light bg-card w-100">
     <!-- card title -->
     <div class="pt-3 sm:pt-5 w-full">
       <h2 class="font-semibold text-light">Styleguide</h2>

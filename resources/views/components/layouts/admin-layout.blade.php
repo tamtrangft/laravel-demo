@@ -18,9 +18,9 @@
   @stack('style')
 </head>
 
-<body class="min-vh-100 d-flex flex-column">
+<body class="min-vh-100 d-flex flex-column bg-black">
   <div class="position-relative flex-grow-1">
-    <img id="background" class="position-absolute top-0 start-0 max-width-800 z-0" src="https://laravel.com/assets/img/welcome/background.svg" />
+    <img id="background" style="left: -200px;" class="position-absolute top-0 max-width-800 z-0" src="https://laravel.com/assets/img/welcome/background.svg" />
     <div class="position-relative w-100 justify-content-start z-1 p-4">
       <nav class="navbar navbar-expand-lg bg-dark mb-4 rounded-2">
         <div class="container-fluid">

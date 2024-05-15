@@ -29,7 +29,7 @@
     </div>
   </div>
   <footer class="w-100 p-4 d-flex justify-content-center">
-    User routes - Laravel demo
+    Unauthenticated routes - Laravel demo
   </footer>
   @stack('script')
 </body>

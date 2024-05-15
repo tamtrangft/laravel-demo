@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\WelcomeController;
+use Illuminate\Contracts\View\View;
 
-Route::get('/', function () {
-  return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index']);
+
+Route::get('/login', [LoginController::class, 'index']);
 
 Route::get('/styleguide', function () {
   return view('styleguide');
