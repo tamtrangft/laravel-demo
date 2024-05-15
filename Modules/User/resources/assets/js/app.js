@@ -1,0 +1,1 @@
+window.userModule = 'user'
