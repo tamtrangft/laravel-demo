@@ -17,7 +17,7 @@
   })
 </script>
 @endPush
-<x-user-layout title="Styleguide">
+<x-user::master-layout title="Styleguide">
   <!-- card -->
   <div class="d-flex flex-column gap-4 border border-1 border-light-subtle rounded-2 p-4 shadow focus-ring-light bg-card w-100">
     <!-- card title -->
@@ -62,4 +62,4 @@
       </div>
     </div>
   </div>
-</x-user-layout>
+</x-user::master-layout>

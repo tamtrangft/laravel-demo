@@ -10,7 +10,7 @@ class WelcomeController extends Controller
       ['title' => 'Tools and libs configuration', 'captions' => ['Vite, Bootstrap, JQuery'], 'url' => '/styleguide'],
       ['title' => 'Reuseable components with Blade', 'captions' => ['Bootstrap with theme. Component encapsulation', 'Class components and Anonymous components'], 'url' => '/styleguide'],
       ['title' => 'Styleguide', 'captions' => ['Reusable components presentation'], 'url' => '/styleguide'],
-      ['title' => 'Layout by route', 'captions' => ['Layout outlet. Group route with prefix'], 'url' => '/admin'],
+      ['title' => 'Layout and routes', 'captions' => ['Layout and assets stack. Group route with prefix', 'Web routes and API routes'], 'url' => '/admin'],
       ['title' => 'Authentication', 'captions' => ['Authentication with session and cookie'], 'url' => '/login'],
       ['title' => 'App organisation with Module', 'captions' => ['Break the app into modules'], 'url' => '/user/profile'],
       ['title' => 'Pagination, filter and loading data with Datatables and JQuery', 'captions' => ['Demo using JQery, bootstrapCSS and Datatables'], 'url' => '/admin/users'],
