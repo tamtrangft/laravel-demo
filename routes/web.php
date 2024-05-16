@@ -26,7 +26,7 @@ Route::prefix('admin')->name('admin.')->middleware([IsAdminCheck::class])->group
 });
 
 
-Route::prefix('kh')->middleware([LocaleMiddleware::class])->group(function () {
+Route::prefix('{lang}')->middleware([LocaleMiddleware::class])->group(function () {
   Route::get('/', [WelcomeController::class, 'index']);
 });
 

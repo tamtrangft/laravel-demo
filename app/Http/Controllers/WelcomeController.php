@@ -7,7 +7,7 @@ class WelcomeController extends Controller
   public function index()
   {
     $data = [
-      ['title' => 'Tools and libs configuration', 'captions' => ['Vite, Bootstrap, JQuery'], 'url' => '/styleguide'],
+      ['title' => 'Tools and libs configuration', 'captions' => ['Vite, Bootstrap, JQuery', 'npm install bootstrap @popperjs/core sass', 'npm install jquery'], 'url' => '/styleguide'],
       ['title' => 'Reuseable components with Blade', 'captions' => ['Bootstrap with theme. Component encapsulation', 'Class components and Anonymous components'], 'url' => '/styleguide'],
       ['title' => 'Styleguide', 'captions' => ['Reusable components presentation'], 'url' => '/styleguide'],
       ['title' => 'Layout and routes', 'captions' => ['Layout and assets stack. Group route with prefix', 'Web routes and API routes'], 'url' => '/admin'],
