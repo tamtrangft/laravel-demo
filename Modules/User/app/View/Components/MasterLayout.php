@@ -2,23 +2,23 @@
 
 namespace Modules\User\View\Components;
 
-use App\Services\UserNameService;
+use App\Services\MenuService;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
 class MasterLayout extends Component
 {
-  public UserNameService $userName;
+  public MenuService $menuService;
 
   /**
    * Create a new component instance.
    */
   public function __construct(
     public string $title,
-    public UserNameService $thisUserName
+    public MenuService $thisMenuService
 
   ) {
-    $this->userName = $thisUserName;
+    $this->menuService = $thisMenuService;
   }
 
   /**
@@ -26,6 +26,6 @@ class MasterLayout extends Component
    */
   public function render(): View|string
   {
-    return view('user::layouts.master', ['name' => $this->userName->get()]);
+    return view('user::layouts.master', ['name' => $this->menuService->getUserName(), 'profileUrl' => $this->menuService->getProfileUrl()]);
   }
 }

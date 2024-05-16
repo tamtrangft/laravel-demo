@@ -4,7 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 
-class UserNameService
+class MenuService
 {
   public Request $request;
 
@@ -14,9 +14,17 @@ class UserNameService
     $this->request = $newRequest;
   }
 
-  public function get() {
+  public function getUserName() {
     if ($this->request->user()) {
       return $this->request->user()['name'];
+    } else {
+      return '';
+    }
+  }
+
+  public function getProfileUrl() {
+    if ($this->request->user()) {
+      return '/'.$this->request->user()['role'].'/profile';
     } else {
       return '';
     }

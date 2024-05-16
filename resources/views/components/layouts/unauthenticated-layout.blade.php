@@ -43,7 +43,7 @@
                 {{ $name }}
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="{{ ROUTE_ADMIN_PROFILE }}">Profile</a></li>
+                <li><a class="dropdown-item" href="{{ $profileUrl }}">Profile</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>

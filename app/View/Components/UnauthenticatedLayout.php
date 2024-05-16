@@ -2,24 +2,24 @@
 
 namespace App\View\Components;
 
-use App\Services\UserNameService;
+use App\Services\MenuService;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class UnauthenticatedLayout extends Component
 {
-  public UserNameService $userName;
+  public MenuService $menuService;
   /**
    * Create a new component instance.
    */
   public function __construct(
     public string $title,
-    public UserNameService $thisUserName
+    public MenuService $thisMenuService
 
   ) {
     // $this->request = $newRequest;
-    $this->userName = $thisUserName;
+    $this->menuService = $thisMenuService;
   }
 
   /**
@@ -27,6 +27,6 @@ class UnauthenticatedLayout extends Component
    */
   public function render(): View|Closure|string
   {
-    return view('components.layouts.unauthenticated-layout', ['name' => $this->userName->get()]);
+    return view('components.layouts.unauthenticated-layout', ['name' => $this->menuService->getUserName(), 'profileUrl' => $this->menuService->getProfileUrl()]);
   }
 }
