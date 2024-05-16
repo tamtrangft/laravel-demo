@@ -60,7 +60,7 @@ class AuthController extends Controller
 
 
     if (User::create($credentials)) {
-      $request->session()->regenerate();
+      // $request->session()->regenerate();
 
       return redirect()->intended('/admin');
     }

@@ -3,7 +3,7 @@
 <script type="module">
   $(() => {
     window.btn1ClickHandler = () => {
-      alert('btn1 clicked')
+      alert('btn1 clicked 123123')
     }
 
     window.btn2ClickHandler = () => {

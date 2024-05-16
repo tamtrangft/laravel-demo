@@ -25,14 +25,14 @@ Route::prefix('admin')->name('admin.')->middleware([IsAdminCheck::class])->group
   Route::get('users', [UsersController::class, 'index'])->name('admin.users');
 });
 
+Route::any('adminer', '\Aranyasen\LaravelAdminer\AdminerController@index');
 
 Route::prefix('{lang}')->middleware([LocaleMiddleware::class])->group(function () {
   Route::get('/', [WelcomeController::class, 'index']);
 });
 
-Route::any('adminer', '\Aranyasen\LaravelAdminer\AdminerController@index');
 
 // should be in API route with Laravel Sanctum
-Route::prefix('api')->group(function () {
+Route::prefix('api')->middleware([IsAdminCheck::class])->group(function () {
   Route::get('admin/users', [UsersController::class, 'list']);
 });
