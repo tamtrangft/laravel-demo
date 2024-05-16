@@ -11,12 +11,12 @@ Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate']);
 Route::get('/register', [AuthController::class, 'newUser'])->middleware([IsAdminCheck::class]);
-Route::post('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'register'])->middleware([IsAdminCheck::class]);
 Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::get('/styleguide', function () {
   return view('styleguide');
-});
+})->middleware(['auth']);
 
 Route::prefix('admin')->name('admin.')->middleware([IsAdminCheck::class])->group(function () {
   Route::redirect('/', '/admin/profile' );

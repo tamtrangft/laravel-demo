@@ -2,19 +2,25 @@
 
 namespace App\View\Components;
 
+use App\Services\UserNameService;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class UserLayout extends Component
 {
+  public UserNameService $userName;
   /**
    * Create a new component instance.
    */
   public function __construct(
-    public string $title
+    public string $title,
+    // public Request $newRequest
+    public UserNameService $thisUserName
+
   ) {
-    //
+    // $this->request = $newRequest;
+    $this->userName = $thisUserName;
   }
 
   /**
@@ -22,6 +28,6 @@ class UserLayout extends Component
    */
   public function render(): View|Closure|string
   {
-    return view('components.layouts.user-layout');
+    return view('components.layouts.user-layout', ['name' => $this->userName->get()]);
   }
 }
