@@ -15,7 +15,7 @@ class WelcomeController extends Controller
       ['title' => 'App organisation with Module', 'captions' => ['Break the app into modules'], 'url' => '/user/profile'],
       ['title' => 'Service container and Service provider', 'captions' => ['Dependency injection'], 'url' => '/admin/profile'],
       ['title' => 'Pagination, filter and loading data with Datatables and JQuery', 'captions' => ['Demo using JQery, bootstrapCSS and Datatables'], 'url' => '/admin/users'],
-      ['title' => 'Localization', 'captions' => ['Support multiple language'], 'url' => '/admin'],
+      ['title' => __('welcome.title_localization'), 'captions' => ['Support multiple language'], 'url' => '/kh'],
       ['title' => 'Integrate gprc for Laravel', 'captions' => ['Use grpc web client to send/get data'], 'url' => '/admin'],
     ];
 
