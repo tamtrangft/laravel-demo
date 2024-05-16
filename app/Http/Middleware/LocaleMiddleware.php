@@ -16,7 +16,10 @@ class LocaleMiddleware
    */
   public function handle(Request $request, Closure $next): Response
   {
-    App::setLocale('kh');
+    $segment = $request->segment(1);
+    if (in_array($segment, config('app.locales') )) {
+      App::setLocale($segment);
+    }
     return $next($request);
   }
 }
